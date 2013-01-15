@@ -1,0 +1,47 @@
+{% extends "::base.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" href="{{ asset("bundles/xabbuhpandademo/css/style.css") }}"/>
+{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+
+    <div class="toolbar">
+        <form method="get" action="{{ path("xabbuh_panda_demo_change_cloud") }}">
+            <label for="cloud">Cloud:</label>
+            <select name="cloud" id="cloud">
+            {% for cloud in clouds|keys %}
+                <option value="{{ cloud }}"{% if selected_cloud == cloud %} selected="selected"{% endif %}>{{ cloud }}</option>
+            {% endfor %}
+            </select>
+
+            <input type="submit" value="ok"/>
+        </form>
+
+        <ul class="menu">
+            <li><a href="{{ path("xabbuh_panda_demo_cloud", {"cloud": selected_cloud}) }}">Cloud details</a></li>
+            <li><a href="{{ path("xabbuh_panda_demo_videos", {"cloud": selected_cloud}) }}">Videos</a></li>
+            <li><a href="">Add video</a></li>
+        </ul>
+    </div>
+
+    {% if app.session.hasFlash("success") %}
+        <div class="flash success-flash">
+            {{ app.session.getFlash("success") }}
+        </div>
+    {% endif %}
+
+    {% if app.session.hasFlash("error") %}
+        <div class="flash error-flash">
+            {{ app.session.getFlash("error") }}
+        </div>
+    {% endif %}
+
+    {% if app.session.hasFlash("info") %}
+        <div class="flash info-flash">
+            {{ app.session.getFlash("info") }}
+        </div>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "XabbuhPandaDemoBundle::layout.html.twig" %}
+
+{% block body %}
+    {{ parent() }}
+
+    <table>
+        <tbody>
+            <tr>
+                <td class="key">id</td>
+                <td class="value">{{ cloud.id }}</td>
+            </tr>
+            <tr>
+                <td class="key">name</td>
+                <td class="value">{{ cloud.name }}</td>
+            </tr>
+            <tr>
+                <td class="key">s3 videos bucket</td>
+                <td class="value">{{ cloud.s3VideosBucket }}</td>
+            </tr>
+            <tr>
+                <td class="key">s3 private access</td>
+                <td class="value">{% if cloud.isS3AccessPrivate %}yes{% else %}no{% endif %}</td>
+            </tr>
+            <tr>
+                <td class="key">url</td>
+                <td class="value">{{ cloud.url }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

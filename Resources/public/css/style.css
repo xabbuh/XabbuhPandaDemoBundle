@@ -1,0 +1,107 @@
+body {
+    font-family: Arial;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    padding: 10px;
+}
+
+td {
+    padding-right: 20px;
+}
+
+td.key {
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+}
+
+div.toolbar {
+    background-color: #666;
+    padding: 15px;
+}
+
+div.toolbar form {
+    display: inline;
+}
+
+div.toolbar select {
+    width: 200px;
+}
+
+div.toolbar select, div.toolbar input {
+    background-color: #999;
+    border: 1px solid #333;
+}
+
+div.toolbar * {
+    color: #ffffff;
+}
+
+div.toolbar ul.menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: right;
+}
+
+div.toolbar ul.menu li {
+    margin-left: 5px;
+    float: right;
+}
+
+div.flash {
+    border-width: 1px;
+    border-style: solid;
+    margin: 5px;
+    padding: 5px;
+}
+
+div.success-flash {
+    background-color: #dde8ac;
+    border-color: green;
+}
+
+div.error-flash {
+    background-color: #ffc9bd;
+    border-color: red;
+}
+
+div.info-flash {
+    background-color: #eee;
+    border-color: #ccc;
+}
+
+div.video {
+    background-color: #999;
+    font-size: 12px;
+    border: 1px solid black;
+    float: left;
+    margin: 5px;
+    width: 200px;
+    height: 165px;
+}
+
+div.video img {
+    width: 200px;
+    height: 115px;
+}
+
+div.video div.info {
+    padding: 2px;
+}
+
+div.video div.info .delete-button {
+    font-size: 13px;
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+    padding-right: 5px;
+    display: block;
+    float: right;
+}

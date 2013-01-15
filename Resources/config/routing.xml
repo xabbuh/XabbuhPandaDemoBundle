@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <route id="xabbuh_panda_demo_videos" pattern="/videos">
+        <default key="_controller">XabbuhPandaDemoBundle:Demo:videos</default>
+    </route>
+
+    <route id="xabbuh_panda_demo_delete_video" pattern="/video/{videoid}/delete">
+        <default key="_controller">XabbuhPandaDemoBundle:Demo:deleteVideo</default>
+    </route>
+
+    <route id="xabbuh_panda_demo_change_cloud" pattern="/change_cloud">
+        <default key="_controller">XabbuhPandaDemoBundle:Demo:changeCloud</default>
+    </route>
+
+    <route id="xabbuh_panda_demo_cloud" pattern="/cloud">
+        <default key="_controller">XabbuhPandaDemoBundle:Demo:cloud</default>
+    </route>
+</routes>
