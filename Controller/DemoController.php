@@ -1,5 +1,14 @@
 <?php
 
+/*
+* This file is part of the XabbuhPandaDemoBundle package.
+*
+* (c) Christian Flothmann <christian.flothmann@xabbuh.de>
+*
+* For the full copyright and license information, please view the LICENSE
+* file that was distributed with this source code.
+*/
+
 namespace Xabbuh\PandaDemoBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -18,7 +27,6 @@ class DemoController extends Controller
         return $this->render('XabbuhPandaDemoBundle:Default:index.html.twig', array('name' => $name));
     }
 
-    /*
     public function videosAction()
     {
         $cloud = $this->getCloud()->getCloudData();
@@ -26,18 +34,6 @@ class DemoController extends Controller
         return $this->render(
             "XabbuhPandaDemoBundle:Demo:videos.html.twig",
             array("cloud" => $cloud, "videos" => $videos)
-        );
-    }
-    */
-
-    public function videosAction($cloudName)
-    {
-        $cloudManager = $this->container->get("cloud_manager");
-        $cloud = $cloudManager->getCloud($cloudName);
-        $videos = $cloud->getVideos();
-        $this->render(
-            "XabbuhPandaDemoBundle:Demo:videos.html.twig",
-            array("videos" => $videos)
         );
     }
 
