@@ -9,7 +9,11 @@
                 <img src="{{ cloud.url }}{{ encoding.videoId }}_1.jpg"/>
             </a>
             <div class="info">
-                Profile: {{ encoding.profileName }}<br/>
+                Profile:
+                <a href="{{ path("xabbuh_panda_demo_profile", {"profileid": encoding.profileId}) }}">
+                    {{ encoding.profileName }}
+                </a>
+                <br/>
                 Dimension: {{ encoding.width }}x{{ encoding.height }}<br/>
                 Encoding completed:
                 {% if encoding.status == "success" %}

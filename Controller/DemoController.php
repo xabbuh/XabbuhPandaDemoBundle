@@ -74,6 +74,15 @@ class DemoController extends Controller
             array("cloud" => $cloud)
         );
     }
+    
+    public function profileAction($profileid)
+    {
+        $profile = $this->getCloud()->getProfile($profileid);
+        return $this->render(
+            "XabbuhPandaDemoBundle:Demo:profile.html.twig",
+            array("profile" => $profile)
+        );
+    }
 
     /**
      * @return \Xabbuh\PandaBundle\Cloud\Cloud

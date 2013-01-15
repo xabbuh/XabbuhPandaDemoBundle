@@ -1,0 +1,38 @@
+{% extends "XabbuhPandaDemoBundle::layout.html.twig" %}
+
+{% block body %}
+    {{ parent() }}
+
+    <table>
+        <tbody>
+            <tr>
+                <td class="key">id</td>
+                <td class="value">{{ profile.id }}</td>
+            </tr>
+            <tr>
+                <td class="key">title</td>
+                <td class="value">{{ profile.title }}</td>
+            </tr>
+            <tr>
+                <td class="key">name</td>
+                <td class="value">{{ profile.name }}</td>
+            </tr>
+            <tr>
+                <td class="key">width</td>
+                <td class="value">{{ profile.width }}</td>
+            </tr>
+            <tr>
+                <td class="key">height</td>
+                <td class="value">{{ profile.height }}</td>
+            </tr>
+            <tr>
+                <td class="key">audio bitrate</td>
+                <td class="value">{{ profile.audioBitrate }}</td>
+            </tr>
+            <tr>
+                <td class="key">video bitrate</td>
+                <td class="value">{{ profile.videoBitrate }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

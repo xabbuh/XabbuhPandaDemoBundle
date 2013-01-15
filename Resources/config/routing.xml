@@ -23,4 +23,8 @@
     <route id="xabbuh_panda_demo_cloud" pattern="/cloud">
         <default key="_controller">XabbuhPandaDemoBundle:Demo:cloud</default>
     </route>
+    
+    <route id="xabbuh_panda_demo_profile" pattern="/profile/{profileid}">
+        <default key="_controller">XabbuhPandaDemoBundle:Demo:profile</default>
+    </route>
 </routes>
