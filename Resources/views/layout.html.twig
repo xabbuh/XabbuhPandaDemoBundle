@@ -9,16 +9,20 @@
     {{ parent() }}
 
     <div class="toolbar">
-        <form method="get" action="{{ path("xabbuh_panda_demo_change_cloud") }}">
-            <label for="cloud">Cloud:</label>
-            <select name="cloud" id="cloud">
-            {% for cloud in clouds|keys %}
-                <option value="{{ cloud }}"{% if selected_cloud == cloud %} selected="selected"{% endif %}>{{ cloud }}</option>
-            {% endfor %}
-            </select>
+        {% if clouds|length > 1 %}
+            <form method="get" action="{{ path("xabbuh_panda_demo_change_cloud") }}">
+                <label for="cloud">Cloud:</label>
+                <select name="cloud" id="cloud">
+                {% for cloud in clouds|keys %}
+                    <option value="{{ cloud }}"{% if selected_cloud == cloud %} selected="selected"{% endif %}>{{ cloud }}</option>
+                {% endfor %}
+                </select>
 
-            <input type="submit" value="ok"/>
-        </form>
+                <input type="submit" value="ok"/>
+            </form>
+        {% else %}
+            <label for="cloud">Cloud: {{ clouds|keys[0] }}</label>
+        {% endif %}
 
         <ul class="menu">
             <li><a href="{{ path("xabbuh_panda_demo_cloud", {"cloud": selected_cloud}) }}">Cloud details</a></li>
