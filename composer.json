@@ -1,0 +1,10 @@
+{
+    "name": "xabbuh/panda-demo-bundle",
+    "autoload": {
+        "psr-0": { "Xabbuh\\PandaDemoBundle": "" }
+    },
+    "require": {
+        "xabbuh/panda-bundle": "*"
+    },
+    "target-dir": "Xabbuh/PandaDemoBundle"
+}
