@@ -7,6 +7,10 @@
     <route id="xabbuh_panda_demo_videos" pattern="/videos">
         <default key="_controller">XabbuhPandaDemoBundle:Demo:videos</default>
     </route>
+    
+    <route id="xabbuh_panda_demo_video_encodings" pattern="/video/{videoid}/encodings">
+        <default key="_controller">XabbuhPandaDemoBundle:Demo:videoEncodings</default>
+    </route>
 
     <route id="xabbuh_panda_demo_delete_video" pattern="/video/{videoid}/delete">
         <default key="_controller">XabbuhPandaDemoBundle:Demo:deleteVideo</default>

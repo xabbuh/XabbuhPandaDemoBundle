@@ -1,0 +1,24 @@
+{% extends "XabbuhPandaDemoBundle::layout.html.twig" %}
+
+{% block body %}
+    {{ parent() }}
+    
+    {% for encoding in encodings %}
+        <div class="encoding">
+            <a href="{{ cloud.url }}{{ encoding.files[0] }}">
+                <img src="{{ cloud.url }}{{ encoding.videoId }}_1.jpg"/>
+            </a>
+            <div class="info">
+                Profile: {{ encoding.profileName }}<br/>
+                Dimension: {{ encoding.width }}x{{ encoding.height }}<br/>
+                Encoding completed:
+                {% if encoding.status == "success" %}
+                    <span class="encoding_status_complete">yes</span><br/>
+                {% else %}
+                    <span class="encoding_status_incomplete">no</span><br/>
+                    Encoding progress: {{ encoding.encodingProgress }}%<br/>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

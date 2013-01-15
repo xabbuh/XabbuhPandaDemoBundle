@@ -36,6 +36,16 @@ class DemoController extends Controller
             array("cloud" => $cloud, "videos" => $videos)
         );
     }
+    
+    public function videoEncodingsAction($videoid)
+    {
+        $cloud = $this->getCloud()->getCloudData();
+        $encodings = $this->getCloud()->getEncodingsForVideo($videoid);
+        return $this->render(
+            "XabbuhPandaDemoBundle:Demo:video_encodings.html.twig",
+            array("cloud" => $cloud, "encodings" => $encodings)
+        );
+    }
 
     public function deleteVideoAction($videoid)
     {

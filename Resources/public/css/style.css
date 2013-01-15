@@ -77,7 +77,8 @@ div.info-flash {
     border-color: #ccc;
 }
 
-div.video {
+div.video,
+div.encoding {
     background-color: #999;
     font-size: 12px;
     border: 1px solid black;
@@ -87,12 +88,18 @@ div.video {
     height: 165px;
 }
 
-div.video img {
+div.encoding {
+    height: 180px;
+}
+
+div.video img,
+div.encoding img {
     width: 200px;
     height: 115px;
 }
 
-div.video div.info {
+div.video div.info,
+div.encoding div.info {
     padding: 2px;
 }
 
@@ -104,4 +111,12 @@ div.video div.info .delete-button {
     padding-right: 5px;
     display: block;
     float: right;
+}
+
+span.encoding_status_complete {
+    color: green;
+}
+
+span.encoding_status_incomplete {
+    color: red;
 }

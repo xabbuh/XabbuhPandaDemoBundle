@@ -5,7 +5,9 @@
 
     {% for video in videos %}
         <div class="video">
-            <img src="{{ cloud.url }}{{ video.id }}_1.jpg"/>
+            <a href="{{ path("xabbuh_panda_demo_video_encodings", {"videoid": video.id}) }}">
+                <img src="{{ cloud.url }}{{ video.id }}_1.jpg"/>
+            </a>
             <div class="info">
                 <a class="delete-button" href="{{ path("xabbuh_panda_demo_delete_video", {"videoid": video.id}) }}">X</a>
                 {{ video.originalFilename }}<br/>
