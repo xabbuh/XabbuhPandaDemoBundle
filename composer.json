@@ -4,7 +4,7 @@
         "psr-0": { "Xabbuh\\PandaDemoBundle": "" }
     },
     "require": {
-        "xabbuh/panda-bundle": "*"
+        "xabbuh/panda-bundle": "dev-master"
     },
     "target-dir": "Xabbuh/PandaDemoBundle"
 }
