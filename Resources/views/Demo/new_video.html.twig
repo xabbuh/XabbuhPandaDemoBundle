@@ -1,0 +1,26 @@
+{% extends "XabbuhPandaDemoBundle::layout.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    <link rel="stylesheet" type="text/css" href="{{ asset("bundles/xabbuhpanda/video-uploader/style.css") }}"/>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.pandastream.com/u/2.0.0-pre6/panda-uploader.min.js"></script>
+    <script type="text/javascript" src="{{ asset("bundles/xabbuhpanda/video-uploader/jquery-v1.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("bundles/xabbuhpanda/video-uploader/jquery-v2.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("bundles/xabbuhpanda/video-uploader/prototype-v2.js") }}"></script>
+{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+
+    <form method="post" action="{{ path("xabbuh_panda_demo_add_video") }}">
+        {{ form_widget(form) }}
+
+        <input type="submit"/>
+    </form>
+{% endblock %}

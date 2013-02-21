@@ -36,6 +36,24 @@ class DemoController extends Controller
             array("cloud" => $cloud, "videos" => $videos)
         );
     }
+
+    public function addVideoAction()
+    {
+        $form = $this->createFormBuilder(null)
+            ->add(
+                "file",
+                "file",
+                array(
+                    "panda_widget" => true,
+                    "cloud" => $this->container->get("xabbuh_panda_demo.twig.cloud_extension")->getSelectedCloud()
+                )
+            )
+            ->getForm();
+        return $this->render(
+            "XabbuhPandaDemoBundle:Demo:new_video.html.twig",
+            array("form" => $form->createView())
+        );
+    }
     
     public function videoEncodingsAction($videoid)
     {

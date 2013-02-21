@@ -12,6 +12,10 @@
         <default key="_controller">XabbuhPandaDemoBundle:Demo:videoEncodings</default>
     </route>
 
+    <route id="xabbuh_panda_demo_add_video" pattern="/video/new">
+        <default key="_controller">XabbuhPandaDemoBundle:Demo:addVideo</default>
+    </route>
+
     <route id="xabbuh_panda_demo_delete_video" pattern="/video/{videoid}/delete">
         <default key="_controller">XabbuhPandaDemoBundle:Demo:deleteVideo</default>
     </route>
